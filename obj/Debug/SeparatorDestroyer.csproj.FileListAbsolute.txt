@@ -1,0 +1,15 @@
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\SeparatorDestroyer.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\SeparatorDestroyer.pdb
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\Assembly-CSharp.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\KSPAssets.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\UnityEngine.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\UnityEngine.UI.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\TrackIRUnity.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\Mono.Cecil.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\TDx.TDxInput.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\Mono.Security.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\bin\Debug\UnityEngine.xml
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\obj\Debug\SeparatorDestroyer.csprojResolveAssemblyReference.cache
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\obj\Debug\SeparatorDestroyer.dll
+C:\Users\Xyphos\Documents\Visual Studio 2013\Projects\KSP\SeparatorDestroyer\SeparatorDestroyer\obj\Debug\SeparatorDestroyer.pdb
