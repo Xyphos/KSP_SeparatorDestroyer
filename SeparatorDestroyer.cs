@@ -1,46 +1,36 @@
-﻿/* SeparatorDestroyer - a module plugin for Kerbal Space Program to fully destroy Stack Separators upon separation.
- * Author: William "Xyphos" Scott
- * Date: April 22, 2017
- * Licence: PUBLIC DOMAIN
- * 
- * THIS SOFTWARE IS PROVIDED BY THE AUTHORS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
- * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
- * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-namespace SeparatorDestroyer
+﻿namespace SeparatorDestroyer
 {
     public class SeparatorDestroyer : PartModule
     {
+        [KSPField(isPersistant = true, guiName = "Destroyed when decoupled:", guiActive = true, guiActiveEditor = true)]
+        [UI_Toggle(disabledText = "No", enabledText = "Yes", controlEnabled = false)]
+        public bool Enabled = false;
+
         private ModuleDecouple _moduleDecouple;
-        
+
         public override void OnAwake()
         {
             base.OnAwake();
 
             _moduleDecouple = part.Modules.GetModule<ModuleDecouple>();
 
-            // normal decouplers shouldn't be considered and therefore, nullified.
-            if (_moduleDecouple != null
-                && !_moduleDecouple.isOmniDecoupler)
-                _moduleDecouple = null;
+            if (_moduleDecouple == null
+                || _moduleDecouple.isOmniDecoupler)
+                return;
+
+            // normal decouplers shouldn't be considered and therefore nullified, with their GUI fields disabled.
+            _moduleDecouple = null;
+            Fields["Enabled"].guiActive = false;
+            Fields["Enabled"].guiActiveEditor = false;
         }
 
-        public override void OnUpdate()
+        public override void OnFixedUpdate()
         {
-            base.OnUpdate();
-            
-            if(_moduleDecouple != null 
-                && _moduleDecouple.isDecoupled) 
-                    part.explode();
-        }
-
-        public override string GetInfo()
-        {
-            return "Destroyed when decoupled";
+            base.OnFixedUpdate();
+            if (Enabled
+                && _moduleDecouple != null
+                && _moduleDecouple.isDecoupled)
+                part.explode();
         }
     }
 }
